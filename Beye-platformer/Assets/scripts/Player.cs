@@ -5,10 +5,14 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] float runSpeed = 5.0f;
+    [SerializeField] float jumpSpeed = 5.0f;
+    [SerializeField] float climbSpeed = 5.0f;
 
+    Collider2D playerCollider;
     Rigidbody2D playerCharacter;
-
     Animator playerAnimator;
+
+    float gravityScaleAtStart;
 
 
     // Start is called before the first frame update
@@ -16,6 +20,9 @@ public class Player : MonoBehaviour
     {
         playerCharacter = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
+        playerCollider = GetComponent<Collider2D>();
+
+        gravityScaleAtStart = playerCharacter.gravityScale;
     }
 
     // Update is called once per frame
@@ -23,6 +30,8 @@ public class Player : MonoBehaviour
     {
         Run();
         FlipSprite();
+        Jump();
+        Climb();
     }
 
     private void Run()
@@ -37,6 +46,8 @@ public class Player : MonoBehaviour
         bool hSpeed = Mathf.Abs(playerCharacter.velocity.x) > Mathf.Epsilon;
 
         playerAnimator.SetBool("run", hSpeed);
+
+        print(runVelocity);
     }
 
     private void FlipSprite()
@@ -51,4 +62,40 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void Jump()
+    {
+        if (!playerCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        {
+            //Will stop this method unless true
+            return;
+        }
+
+        if(Input.GetButtonDown("Jump") ) 
+        {
+            //Get new y velocity based on controllable variable
+            Vector2 jumpVelocity = new Vector2(0.0f, jumpSpeed);
+            playerCharacter.velocity += jumpVelocity;
+        }
+    }
+
+    private void Climb()
+    {
+        if (!playerCollider.IsTouchingLayers(LayerMask.GetMask("Climbing")))
+        {
+            playerAnimator.SetBool("climb", false);
+            playerCharacter.gravityScale = gravityScaleAtStart;
+            //Will stop this method unless true
+            return;
+        }
+
+        // "Vertical" from input axes
+        float vMovement = Input.GetAxis("Vertical");
+        // X needs to remainthe same and we need to change Y
+        Vector2 climbVelocity = new Vector2(playerCharacter.velocity.x, vMovement * climbSpeed);
+        playerCharacter.velocity = climbVelocity;
+
+        playerCharacter.gravityScale = 0.0f;
+        bool vSpeed = Mathf.Abs(playerCharacter.velocity.y) > Mathf.Epsilon;
+        playerAnimator.SetBool("climb", vSpeed);
+    }
 }
