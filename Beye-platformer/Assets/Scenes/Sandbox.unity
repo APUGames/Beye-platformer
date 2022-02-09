@@ -9848,7 +9848,7 @@ PrefabInstance:
       objectReference: {fileID: 1921283384}
     - target: {fileID: 8890842602541022500, guid: e803b32599cd72347a7a98a8802b2c8d, type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 21
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9195317697133739180, guid: e803b32599cd72347a7a98a8802b2c8d, type: 3}
       propertyPath: m_BoundingShape2D
