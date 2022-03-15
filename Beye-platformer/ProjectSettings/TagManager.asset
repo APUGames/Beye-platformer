@@ -13,12 +13,12 @@ TagManager:
   - UI
   - Ground
   - Climbing
-  - background
-  - player
-  - enemy
-  - 
-  - 
-  - 
+  - Background
+  - Player
+  - Enemy
+  - Hazards
+  - Interactables
+  - Pickups
   - 
   - 
   - 
@@ -53,6 +53,15 @@ TagManager:
   - name: player
     uniqueID: 1883823091
     locked: 0
-  - name: enemy
+  - name: Hazards
+    uniqueID: 3639222509
+    locked: 0
+  - name: Interactables
+    uniqueID: 4143156665
+    locked: 0
+  - name: Enemy
     uniqueID: 941599467
+    locked: 0
+  - name: Pickup
+    uniqueID: 2277322599
     locked: 0

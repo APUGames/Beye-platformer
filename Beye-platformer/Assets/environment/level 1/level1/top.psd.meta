@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d031b93ead348774d96003f705a930b2
+guid: 98e9bd2ef1583b14a9f18f34fad86d0a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -52,7 +52,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -152,65 +152,10 @@ TextureImporter:
     serializedVersion: 2
     sprites: []
     outline: []
-    physicsShape:
-    - - {x: -14, y: -16}
-      - {x: -14, y: -15}
-      - {x: -13, y: -15}
-      - {x: -13, y: -13}
-      - {x: -12, y: -13}
-      - {x: -12, y: -12}
-      - {x: -11, y: -12}
-      - {x: -11, y: -11}
-      - {x: -10, y: -11}
-      - {x: -10, y: -10}
-      - {x: -9, y: -10}
-      - {x: -9, y: -8}
-      - {x: -8, y: -8}
-      - {x: -8, y: -6}
-      - {x: -7, y: -6}
-      - {x: -7, y: -3}
-      - {x: -6, y: -3}
-      - {x: -6, y: 0}
-      - {x: -5, y: 0}
-      - {x: -5, y: -3}
-      - {x: -4, y: -3}
-      - {x: -4, y: -7}
-      - {x: -3, y: -7}
-      - {x: -3, y: -9}
-      - {x: -2, y: -9}
-      - {x: -2, y: -11}
-      - {x: -1, y: -11}
-      - {x: -1, y: -13}
-      - {x: 0, y: -13}
-      - {x: 0, y: -16}
-    - - {x: 11, y: -4}
-      - {x: 11, y: -9}
-      - {x: 12, y: -9}
-      - {x: 12, y: -12}
-      - {x: 13, y: -12}
-      - {x: 13, y: -14}
-      - {x: 14, y: -14}
-      - {x: 14, y: -16}
-      - {x: 3, y: -16}
-      - {x: 3, y: -14}
-      - {x: 4, y: -14}
-      - {x: 4, y: -12}
-      - {x: 5, y: -12}
-      - {x: 5, y: -10}
-      - {x: 6, y: -10}
-      - {x: 6, y: -8}
-      - {x: 7, y: -8}
-      - {x: 7, y: -5}
-      - {x: 8, y: -5}
-      - {x: 8, y: -1}
-      - {x: 9, y: -1}
-      - {x: 9, y: 1}
-      - {x: 10, y: 1}
-      - {x: 10, y: 1}
-      - {x: 10, y: -4}
+    physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -219,7 +164,7 @@ TextureImporter:
     nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
+  pSDShowRemoveMatteOption: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 
