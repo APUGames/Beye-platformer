@@ -19,7 +19,7 @@ TagManager:
   - Hazards
   - Interactables
   - Pickups
-  - 
+  - sky
   - 
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: sky
+    uniqueID: 2353302867
     locked: 0
   - name: background
     uniqueID: 2419184839
