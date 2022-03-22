@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - key
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Interactables
   - Pickups
   - sky
-  - 
+  - key
   - 
   - 
   - 
@@ -47,11 +48,11 @@ TagManager:
   - name: background
     uniqueID: 2419184839
     locked: 0
-  - name: foreground
-    uniqueID: 719331017
-    locked: 0
   - name: climbing
     uniqueID: 1209883203
+    locked: 0
+  - name: foreground
+    uniqueID: 719331017
     locked: 0
   - name: player
     uniqueID: 1883823091
@@ -67,4 +68,7 @@ TagManager:
     locked: 0
   - name: Pickup
     uniqueID: 2277322599
+    locked: 0
+  - name: key
+    uniqueID: 4164305943
     locked: 0

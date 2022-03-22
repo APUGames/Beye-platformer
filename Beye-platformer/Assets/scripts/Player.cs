@@ -18,6 +18,9 @@ public class Player : MonoBehaviour
 
     bool isAlive = true;
 
+    int keysgot = 0;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,11 +41,15 @@ public class Player : MonoBehaviour
             return;
         }
 
+
         Die();
         Run();
         FlipSprite();
         Jump();
         Climb();
+        Checkkey();
+        Checklock(keysgot);
+
     }
 
     private void Run()
@@ -81,7 +88,7 @@ public class Player : MonoBehaviour
             return;
         }
 
-        if(Input.GetButtonDown("Jump") ) 
+        if(Input.GetButtonDown("Jump")) 
         {
             //Get new y velocity based on controllable variable
             Vector2 jumpVelocity = new Vector2(0.0f, jumpSpeed);
@@ -99,6 +106,7 @@ public class Player : MonoBehaviour
             return;
         }
 
+
         // "Vertical" from input axes
         float vMovement = Input.GetAxis("Vertical");
         // X needs to remainthe same and we need to change Y
@@ -112,14 +120,36 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-        if (playerBodyCollider.IsTouchingLayers(
-      LayerMask.GetMask("Enemy", "Hazards")))
+        if (playerBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards")))
         {
             isAlive = false;
             playerAnimator.SetTrigger("die");
             GetComponent<Rigidbody2D>().velocity = deathSeq;
             FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
-
     }
+
+    private void Checkkey()
+    {
+        if (playerBodyCollider.IsTouchingLayers(LayerMask.GetMask("key")))
+        {
+            keysgot = keysgot + 1;
+        }
+    }
+
+    private void Checklock(int key)
+    {
+        if (playerBodyCollider.IsTouchingLayers(LayerMask.GetMask("lock")))
+        {
+            if (key == 3)
+            {
+
+            }
+            if (!(key == 3))
+            {
+
+            }
+        }
+    }
+
 }
