@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameSession : MonoBehaviour
 {
-    [SerializeField] int playerLives = 3; 
+    [SerializeField] int Lives = 3;
+    [SerializeField] Text lives;
 
     public void ProcessPlayerDeath()
     {
-        if(playerLives > 1)
+        if(Lives > 1)
         {
             SubtractLife();
         }

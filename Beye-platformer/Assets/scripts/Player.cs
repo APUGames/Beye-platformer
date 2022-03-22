@@ -101,7 +101,6 @@ public class Player : MonoBehaviour
             playerCharacter.velocity += jumpVelocity;
         }
 
-        
     }
 
     private void Climb()
