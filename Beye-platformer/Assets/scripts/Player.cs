@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     [SerializeField] float jumpSpeed = 5.0f;
     [SerializeField] float climbSpeed = 5.0f;
     [SerializeField] Vector2 deathSeq = new Vector2(25f, 25f);
+    [SerializeField] AudioClip jump_01;
+    AudioSource audioSource;
 
     CapsuleCollider2D playerBodyCollider;
     Rigidbody2D playerCharacter;
@@ -31,6 +33,10 @@ public class Player : MonoBehaviour
         playerFeetCollider = GetComponent<BoxCollider2D>();
 
         gravityScaleAtStart = playerCharacter.gravityScale;
+
+        audioSource = GetComponent<AudioSource>();
+
+
     }
 
     // Update is called once per frame
@@ -94,6 +100,8 @@ public class Player : MonoBehaviour
             Vector2 jumpVelocity = new Vector2(0.0f, jumpSpeed);
             playerCharacter.velocity += jumpVelocity;
         }
+
+        
     }
 
     private void Climb()
@@ -137,17 +145,17 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void Checklock(int key)
+    private void Checklock(int keysgot)
     {
         if (playerBodyCollider.IsTouchingLayers(LayerMask.GetMask("lock")))
         {
-            if (key == 3)
+            if (keysgot == 3)
             {
-
+                Destroy(gameObject);
             }
-            if (!(key == 3))
+            if (!(keysgot == 3))
             {
-
+                //GetComponent<Renderer>().enabled = int;
             }
         }
     }

@@ -22,7 +22,7 @@ TagManager:
   - Pickups
   - sky
   - key
-  - 
+  - lock
   - 
   - 
   - 
@@ -50,6 +50,9 @@ TagManager:
     locked: 0
   - name: climbing
     uniqueID: 1209883203
+    locked: 0
+  - name: lock
+    uniqueID: 1725122993
     locked: 0
   - name: foreground
     uniqueID: 719331017

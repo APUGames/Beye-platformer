@@ -12,6 +12,6 @@ public class Menu : MonoBehaviour
     }
     public void Replay()
     {
-        SceneManager.LoadScene(01);
+        SceneManager.LoadScene(00);
     }
 }
