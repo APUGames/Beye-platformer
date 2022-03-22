@@ -163,7 +163,7 @@ MonoBehaviour:
   jumpSpeed: 15
   climbSpeed: 5
   deathSeq: {x: 25, y: 25}
-  jump_01: {fileID: 0}
+  jump_01: {fileID: 8300000, guid: 73ee18c1cdbf4df4690b09f996600442, type: 3}
 --- !u!114 &604082871628242900
 MonoBehaviour:
   m_ObjectHideFlags: 0

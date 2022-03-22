@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GameSession : MonoBehaviour
 {
-    [SerializeField] int Lives = 3;
+    [SerializeField] int Lives = 5;
     [SerializeField] Text lives;
 
     public void ProcessPlayerDeath()
@@ -30,9 +30,10 @@ public class GameSession : MonoBehaviour
 
     private void SubtractLife()
     {
-        playerLives--;
+        Lives--;
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
+        lives.text = Lives.ToString();
     }
 
     void Awake()
@@ -52,7 +53,7 @@ public class GameSession : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        lives.text = Lives.ToString();
     }
 
     // Update is called once per frame

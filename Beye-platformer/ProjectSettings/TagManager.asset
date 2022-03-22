@@ -23,7 +23,7 @@ TagManager:
   - sky
   - key
   - lock
-  - 
+  - lazer
   - 
   - 
   - 
@@ -74,4 +74,7 @@ TagManager:
     locked: 0
   - name: key
     uniqueID: 4164305943
+    locked: 0
+  - name: lazer
+    uniqueID: 3632989665
     locked: 0
